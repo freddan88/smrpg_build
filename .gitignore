@@ -1,4 +1,5 @@
 sources
 addons
-build/*
+build/addons
+build/cfg
 smrpg_org_compile.sh
