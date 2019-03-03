@@ -3,7 +3,7 @@ Links:
 WebPage: http://www.leemann.se/fredrik
 Donate: https://www.paypal.me/freddan88
 YouTube: https://www.youtube.com/user/FreLee54
-GitHub: https://github.com/freddan88/smrpg_build
+GitHub: [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
 Description:
 ------------
@@ -57,6 +57,18 @@ Instructions:
 
 Installation
 ------------
+
+1. Download and install babun Shell:
+http://babun.github.io/
+
+2. Install dependencies in babun: 
+pact install zip unzip wget curl git nano
+
+3. Use 'git clone' to clone this repo to your computer:
+git clone https://github.com/freddan88/smrpg_build.git
+
+4. Download and extract sourcemod to smrpg_build/build
+https://www.sourcemod.net/downloads.php?branch=stable
 
 Configuration
 -------------
