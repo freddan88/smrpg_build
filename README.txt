@@ -14,7 +14,7 @@ I didn´t find the original build-script to work so I created my own
 I take no responsibility for this script, use at your own risk
 Security and bugs shall be reported to each individual project
 
-This script will download dependencies for smrpg.
+This script will download all dependencies and compile them with the plugin
 
 Tested on: 
 - Windows using babun Shell version 1.2.0
