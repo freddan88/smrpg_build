@@ -50,6 +50,9 @@ Username: minimoney1
 Plugin: simple-chat-processor
 URL: https://bitbucket.org/minimoney1/simple-chat-processor
 
+Instructions:
+-------------
+
 * WINDOWS *
 
 Installation
