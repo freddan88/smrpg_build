@@ -6,11 +6,31 @@
 
 # Windows:
 wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
-unzip -qq dhooks-2.2.0-hg126-windows.zip
+unzip -qqo dhooks*windows.zip
 
 # Linux:
 # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
-# tar -zxf dhooks-2.2.0-hg126-linux.tar.gz
+# tar -zxf --overwrite dhooks*linux.tar.gz
+
+root_path=$(pwd)
+rm -rf dhooks-*.*
+
+if [ ! -d "$root_path/build" ]; then
+	echo " "
+	echo "Error no directory: ./build"
+	echo " "
+	exit
+elif [ ! -d "$root_path/build/smrpg_assets" ]; then
+	echo " "
+	echo "Error missing smrpg_assets in: ./build"
+	echo " "
+	exit
+elif [ ! -d "$root_path/build/addons/sourcemod" ]; then
+	echo " "
+	echo "Error missing sourcemod in: ./build"
+	echo " "
+	exit
+fi
 
 array_giturls=(
 	"git clone -q https://github.com/bcserv/smlib.git addons/src"
@@ -21,7 +41,6 @@ array_giturls=(
 	"git clone -q https://bitbucket.org/minimoney1/simple-chat-processor.git addons/src"
 )
 
-rm -rf dhooks-*.*
 autoversion_file="./addons/sourcemod/scripting/include/smrpg/smrpg_autoversion.inc"
 
 giturls_length=${#array_giturls[@]}
@@ -33,8 +52,8 @@ for((i=0; i<=$giturls_length - 1; i++)); do
 	${array_giturls[i]}
 
 	if [[ "${array_giturls[i]}" = *smrpg.git* ]]; then
-
-		cd addons/src
+	
+		cd ./addons/src
 		mkdir -p plugins
 		smrpg_rev=$(git rev-list --count HEAD)
 		smrpg_cset=$(git rev-parse --short HEAD)
@@ -44,10 +63,10 @@ for((i=0; i<=$giturls_length - 1; i++)); do
 		wget -q http://www.sourcemod.net/vbcompiler.php\?file_id\=141520 -O ./plugins/csgo_movement_unlocker.smx
 		curl -s https://forums.alliedmods.net/attachment.php\?attachmentid\=141521\&d\=1495261818 -o ./gamedata/csgo_movement_unlocker.games.txt
 		wget -q https://forums.alliedmods.net/attachment.php\?attachmentid\=141520\&d\=1421117043 -O ./scripting/csgo_movement_unlocker.sp
-		cd ../..
+		cd $root_path
 	fi
 
-	pluginfiles=$(ls addons/src | grep -v "LICENSE" | grep -v ".md" | grep -v ".txt" | grep -v ".sh" | grep -v ".png")
+	pluginfiles=$(ls ./addons/src | grep -v "LICENSE" | grep -v ".md" | grep -v ".txt" | grep -v ".sh" | grep -v ".png")
 
 	for pluginfile in $pluginfiles; do
 
@@ -83,18 +102,13 @@ echo "#define SMRPG_VERSION \"$smrpg_ver\"" >> $autoversion_file
 cd ./addons/sourcemod/scripting
 ls smrpg*.sp upgrades/smrpg*.sp > smrpg_plugins.txt
 mkdir -p ./plugins/upgrades
+cd $root_path
 
-cd ../..
+cp -f ./build/smrpg_assets/* ./addons/sourcemod/configs
+cp -rf ./addons/sourcemod ./build/addons
+cd ./build/addons/sourcemod/scripting
 
-pwd
-find . -type f -follow -print > filepaths.txt
-exit 0
-
-# wget -q http://www.sourcemod.net/vbcompiler.php\?file_id\=141520 -O ../plugins/csgo_movement_unlocker.smx
-# wget -q https://forums.alliedmods.net/attachment.php?attachmentid=141521&d=1495261818 -O ../gamedata/csgo_movement_unlocker.games.txt
-# wget -q https://forums.alliedmods.net/attachment.php\?attachmentid\=141520\&d\=1421117043 -O csgo_movement_unlocker.sp
-
-for plugin in $(cat plugins.txt); do
+for plugin in $(cat smrpg_plugins.txt); do
 	
 	filename=$(echo $plugin | cut -f'1' -d'.')
 	file_ext=$(echo $plugin | cut -f'2' -d'.')
@@ -102,13 +116,25 @@ for plugin in $(cat plugins.txt); do
 	# echo $filename
 	# echo $file_ext
 	# echo $plugin
-	
-	./spcomp.* ./$plugin -o ./plugins/$filename
-	
+
+	if [[ "$plugin" = *smrpg_chattags.sp* ]]; then
+		./spcomp.* ./$plugin -o ./plugins/smrpg_chattags_cp.smx -E
+		./spcomp.* ./$plugin -o ./plugins/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
+	elif [[ "$plugin" = *smrpg_upgrade_example.sp* ]]; then
+		echo " "
+		echo Skipping: $plugin
+		echo " "
+	else
+		./spcomp.* ./$plugin -o ./plugins/$filename -E
+	fi
 done
 
-cd ../..
+cp -rf ./plugins $root_path/addons/sourcemod
+cp -rf ./plugins ..
+cd $root_path
 
-# cd addons/sourcemod
-# echo smrpg-compiled-$(date +'%Y%m%d').zip
-# unzip sourcemod-1.9.0-git6275-windows.zip -d build
+zip -qr smrpg-compiled-$(date +'%Y%m%d-%s').zip ./addons
+rm -rf ./addons
+
+echo " "
+exit 0
