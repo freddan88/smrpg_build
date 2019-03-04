@@ -1,4 +1,4 @@
-﻿## smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
+﻿### smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
 
 | My Links: ||
 | --------: | --------------------------------------------------
@@ -7,10 +7,8 @@
 | Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
 | GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
-```
-Download and extract sourcemod to this directory
-Optionaly you may also download and extract metamod...
-```
+#### Download and extract sourcemod to this directory<br/>Optionaly you may also download and extract metamod...
+
 ### Links:
 
 - Sourcemod: [sourcemod.net/downloads](https://www.sourcemod.net/downloads.php?branch=stable)
