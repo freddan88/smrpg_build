@@ -109,9 +109,10 @@ _Tip: You can change the version getting downloaded by changing the URL - Downlo
 
 2. When the script is done compiling you will have a zip file containing only the plugins
 
-3. The folders addons and cfg found in ./build can be used for new installations of SRCDS game servers
+3. The folders addons and cfg found in ./build can be used for new installations of SRCDS
 
-_Tip: You can download and install metamod to this directory to - Download from: https://www.sourcemm.net/downloads.php?branch=stable_
+_Tip: You can download and install metamod to this directory to<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable_
 
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
