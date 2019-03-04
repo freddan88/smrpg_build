@@ -3,5 +3,5 @@ addons
 build/addons
 build/cfg
 smrpg_org_compile.sh
+*.tar*
 *.zip
-.tar*
