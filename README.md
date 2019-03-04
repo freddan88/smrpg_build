@@ -112,7 +112,7 @@ _Tip: You can change the version getting downloaded by changing the URL - Downlo
     ./smrpg_build.sh
     ```
 
-2. When the script is done compiling you will have a zip file containing only the plugins
+2. When the script is done compiling you will have a zip file containing the plugins
 
 3. The folders addons and cfg found in ./build can be used for new installations of SRCDS
 
