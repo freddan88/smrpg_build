@@ -1,11 +1,11 @@
-### My Links:
+## smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
 
-| | |
-| -------: | --------------------------------------------------
-| WebPage: | [leemann.se/fredrik](http://www.leemann.se/fredrik)
-| YouTube: | [youtube.com/FreLee54](https://www.youtube.com/user/FreLee54)
-| Donate:  | [paypal.me/freddan88](https://www.paypal.me/freddan88)
-| GitHub:  | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
+| My Links: ||
+| --------: | --------------------------------------------------
+| WebPage:  | [leemann.se/fredrik](http://www.leemann.se/fredrik)
+| YouTube:  | [youtube.com/FreLee54](https://www.youtube.com/user/FreLee54)
+| Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
+| GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
 ### Description:
 
@@ -64,14 +64,14 @@ __WINDOWS__
 http://babun.github.io/
 
 2. Install dependencies in babun:
-```Bash
-pact install zip unzip wget curl git nano
-```
+    ```Bash
+    pact install zip unzip wget curl git nano
+    ```
 
 3. Use 'git clone' to clone this repo to your computer:
-```Bash
-git clone https://github.com/freddan88/smrpg_build.git
-```
+    ```Bash
+    git clone https://github.com/freddan88/smrpg_build.git
+    ```
 
 4. Download and extract sourcemod to smrpg_build/build<br/>
 https://www.sourcemod.net/downloads.php?branch=stable

@@ -1,11 +1,11 @@
-﻿### My Links:
+﻿## smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
 
-| | |
-| -------: | --------------------------------------------------
-| WebPage: | [leemann.se/fredrik](http://www.leemann.se/fredrik)
-| YouTube: | [youtube.com/FreLee54](https://www.youtube.com/user/FreLee54)
-| Donate:  | [paypal.me/freddan88](https://www.paypal.me/freddan88)
-| GitHub:  | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
+| My Links: ||
+| --------: | --------------------------------------------------
+| WebPage:  | [leemann.se/fredrik](http://www.leemann.se/fredrik)
+| YouTube:  | [youtube.com/FreLee54](https://www.youtube.com/user/FreLee54)
+| Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
+| GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
 ```
 Download and extract sourcemod to this directory
