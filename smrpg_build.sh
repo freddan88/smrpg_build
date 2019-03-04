@@ -18,9 +18,8 @@
 
 # Linux:
 # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
-# tar -zxf --overwrite dhooks*linux.tar.gz
+# tar -zxf dhooks*linux.tar.gz
 
-####\
 ################
 root_path=$(pwd)
 rm -rf dhooks-*.*
@@ -128,19 +127,20 @@ for plugin in $(cat smrpg_plugins.txt); do
 	# echo $plugin
 
 	if [[ "$plugin" = *smrpg_chattags.sp* ]]; then
-		./spcomp.* ./$plugin -o ./plugins/smrpg_chattags_cp.smx -E
-		./spcomp.* ./$plugin -o ./plugins/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
+		./spcomp ./$plugin -o ./plugins/smrpg_chattags_cp.smx -E
+		./spcomp ./$plugin -o ./plugins/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
 	elif [[ "$plugin" = *smrpg_upgrade_example.sp* ]]; then
 		echo " "
 		echo Skipping: $plugin
 		echo " "
 	else
-		./spcomp.* ./$plugin -o ./plugins/$filename -E
+		./spcomp ./$plugin -o ./plugins/$filename -E
 	fi
 done
 
 cp -rf ./plugins $root_path/addons/sourcemod
 cp -rf ./plugins ..
+rm -rf ./plugins
 cd $root_path
 
 zip -qr smrpg-compiled-$(date +'%Y%m%d-%s').zip ./addons

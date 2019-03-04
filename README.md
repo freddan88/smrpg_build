@@ -129,6 +129,82 @@ __LINUX__
 
 > Installation
 
+1. Install dependencies:
+
+_Ubuntu_
+    ```Bash
+    apt-get install zip unzip wget curl git nano
+    ```
+
+_CentOS_
+    ```Bash
+    yum install zip unzip wget curl git nano
+    ```
+
+2. Use 'git clone' to clone this repo to your computer:
+    ```Bash
+    git clone https://github.com/freddan88/smrpg_build.git
+    ```
+
+3. Download and extract sourcemod to smrpg_build/build<br/>
+https://www.sourcemod.net/downloads.php?branch=stable
+
+_Tip: You can use wget from Bash and then tar to extract it, example:_
+
+```Bash
+cd ./smrpg_build
+wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-linux.tar.gz
+tar -xvzf sourcemod-1.9.0-git6275-linux.tar.gz -C ./build
+```
+
 > Configuration
 
+1. Use nano in bash to edit and uncoment the two lines used by dhooks for Linux
+
+<pre>
+cd ./smrpg_build
+nano ./smrpg_build.sh
+</pre>
+
+_Example:_
+
+<pre>
+Change from:
+    # Linux:
+    # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
+    # tar -zxf --overwrite dhooks*linux.tar.gz
+</pre>
+
+<pre>
+Change to:
+    # Linux:
+    wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
+    tar -zxf --overwrite dhooks*linux.tar.gz
+</pre>
+
+_Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks_
+
+2. Save the changes and continue reading below for usage
+
 > Usage
+
+1. Change permissions on the script¨
+    ```Bash
+    chmod 754 ./smrpg_build.sh
+    ```
+
+2. Execute the script
+    ```Bash
+    ./smrpg_build.sh
+    ```
+
+3. When the script is done compiling you will have a zip file containing the plugins
+
+4. The folders addons and cfg found in ./build can be used for new installations of SRCDS
+
+_Tip: You can download and install metamod to this directory to<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable_
+
+__WARNING__
+adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
+Keep this in mind before you install the plugins or else you may owerwrite your own files by accident...
