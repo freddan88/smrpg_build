@@ -23,6 +23,7 @@ This script will download all dependencies and compile them with the plugin
 #### Tested on:
 
 - Windows using babun Shell version 1.2.0
+- Linux CentOS 7 64Bit
 
 #### Plugins, dependencies and authors:
 
@@ -76,6 +77,14 @@ http://babun.github.io/
 4. Download and extract sourcemod to smrpg_build/build<br/>
 https://www.sourcemod.net/downloads.php?branch=stable
 
+_Tip: You can use wget from Babun and then unzip to extract it, example:_
+
+```Bash
+cd ./smrpg_build
+wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-windows.zip
+unzip sourcemod-1.9.0-git6275-windows.zip -d ./build
+```
+
 > Configuration
 
 1. Use nano in babun to edit and uncoment the two lines used by dhooks for Windows
@@ -116,8 +125,16 @@ _Tip: You can change the version getting downloaded by changing the URL - Downlo
 
 3. The folders addons and cfg found in ./build can be used for new installations of SRCDS
 
-_Tip: You can download and install metamod to this directory to<br/>
+_Tip: Download and install metamod to this directory to enable autoloading of sourcemod_<br/>
 Download from: https://www.sourcemm.net/downloads.php?branch=stable_
+
+_Example using wget in babun:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
+unzip mmsource-1.10.7-git968-windows.zip -d ./build
+```
 
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
@@ -138,7 +155,7 @@ _Ubuntu_
 
 _CentOS_
     ```Bash
-    yum install zip unzip wget curl git nano
+    yum install zip unzip wget curl git nano glibc.i686 libstdc++.i686
     ```
 
 2. Use 'git clone' to clone this repo to your computer:
@@ -172,14 +189,14 @@ _Example:_
 Change from:
     # Linux:
     # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
-    # tar -zxf --overwrite dhooks*linux.tar.gz
+    # tar -zxf dhooks*linux.tar.gz
 </pre>
 
 <pre>
 Change to:
     # Linux:
     wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
-    tar -zxf --overwrite dhooks*linux.tar.gz
+    tar -zxf dhooks*linux.tar.gz
 </pre>
 
 _Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks_
@@ -202,8 +219,16 @@ _Tip: You can change the version getting downloaded by changing the URL - Downlo
 
 4. The folders addons and cfg found in ./build can be used for new installations of SRCDS
 
-_Tip: You can download and install metamod to this directory to<br/>
+_Tip: Download and install metamod to this directory to enable autoloading of sourcemod_<br/>
 Download from: https://www.sourcemm.net/downloads.php?branch=stable_
+
+_Example using wget in bash:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
+tar -xvzf mmsource-1.10.7-git968-linux.tar.gz -C ./build
+```
 
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
