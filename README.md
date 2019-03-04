@@ -7,7 +7,7 @@
 | Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
 | GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
-### Description:
+#### Description:
 
 <pre>
 Easy to use script to compile and install smrpg from Source
@@ -20,11 +20,11 @@ Security and bugs shall be reported to each individual project
 This script will download all dependencies and compile them with the plugin
 </pre>
 
-### Tested on:
+#### Tested on:
 
 - Windows using babun Shell version 1.2.0
 
-### Plugins, dependencies and authors:
+#### Plugins, dependencies and authors:
 
 Username: drifter<br/>
 Plugin: dhooks<br/>
@@ -54,7 +54,7 @@ Username: minimoney1<br/>
 Plugin: simple-chat-processor<br/>
 URL: https://bitbucket.org/minimoney1/simple-chat-processor<br/>
 
-### Instructions:
+#### Instructions:
 
 __WINDOWS__
 
