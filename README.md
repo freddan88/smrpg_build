@@ -24,6 +24,7 @@ This script will download all dependencies and compile them with the plugin
 
 - Windows using babun Shell version 1.2.0
 - Linux CentOS 7 64Bit
+- Linux Ubuntu 18.04.2 LTS 64Bit
 
 #### Plugins, dependencies and authors:
 
@@ -148,18 +149,17 @@ __LINUX__
 
 1. Install dependencies:
 
-_Ubuntu_
+    _Ubuntu_
     ```Bash
-    apt-get install zip unzip wget curl git nano
+    apt-get install zip unzip wget curl git nano lib32ncurses5 lib32z1 lib32stdc++6
     ```
-
-_CentOS_
-    ```Bash
+    _CentOS_
+    ```
     yum install zip unzip wget curl git nano glibc.i686 libstdc++.i686
     ```
 
 2. Use 'git clone' to clone this repo to your computer:
-    ```Bash
+    ```
     git clone https://github.com/freddan88/smrpg_build.git
     ```
 
