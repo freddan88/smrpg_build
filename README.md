@@ -81,8 +81,8 @@ https://www.sourcemod.net/downloads.php?branch=stable
 1. Use nano in babun to edit and uncoment the two lines used by dhooks for Windows
 
 <pre>
-    cd smrpg_build
-    nano ./smrpg_build.sh
+cd smrpg_build
+nano ./smrpg_build.sh
 </pre>
 
 _Example:_
