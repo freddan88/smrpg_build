@@ -70,7 +70,7 @@ http://babun.github.io/
 
 3. Use 'git clone' to clone this repo to your computer:
     ```Bash
-    git clone https:github.com/freddan88/smrpg_build.git
+    git clone https://github.com/freddan88/smrpg_build.git
     ```
 
 4. Download and extract sourcemod to smrpg_build/build<br/>
