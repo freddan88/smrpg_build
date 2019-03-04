@@ -1,17 +1,27 @@
 #!/bin/bash
-
+#
+# Date: 2019-03-04
+# Author: www.leemann.se/fredrik
+# YouTube: https://www.youtube.com/user/FreLee54
+#
+# WebPage: http://www.leemann.se/fredrik
+# Donate: https://www.paypal.me/freddan88
+# GitHub: https://github.com/freddan88/smrpg_build
+#
 # Copy the url for the latest dhooks-package from:
 # http://users.alliedmods.net/~drifter/builds/dhooks
 # -------------------------------------------------|
 
 # Windows:
-wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
-unzip -qqo dhooks*windows.zip
+# wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
+# unzip -qqo dhooks*windows.zip
 
 # Linux:
 # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
 # tar -zxf --overwrite dhooks*linux.tar.gz
 
+####\
+################
 root_path=$(pwd)
 rm -rf dhooks-*.*
 

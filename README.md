@@ -63,14 +63,14 @@ __WINDOWS__
 1. Download and install babun Shell:<br/>
 http://babun.github.io/
 
-2. Install dependencies in babun:
+2. Open babun and install dependencies:
     ```Bash
     pact install zip unzip wget curl git nano
     ```
 
 3. Use 'git clone' to clone this repo to your computer:
     ```Bash
-    git clone https://github.com/freddan88/smrpg_build.git
+    git clone https:github.com/freddan88/smrpg_build.git
     ```
 
 4. Download and extract sourcemod to smrpg_build/build<br/>
@@ -78,7 +78,46 @@ https://www.sourcemod.net/downloads.php?branch=stable
 
 > Configuration
 
+1. Use nano in babun to edit and uncoment the two lines used by dhooks for Windows
+
+_Example:_
+
+<pre>
+Change from:
+    # Windows:
+    # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
+    # unzip -qqo dhooks*windows.zip
+</pre>
+
+<pre>
+Change to:
+    # Windows:
+    wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
+    unzip -qqo dhooks*windows.zip
+</pre>
+
+_Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks_
+
+2. Save the changes and continue reading below for usage
+
 > Usage
+
+1. Make sure babun is opened in the folder named smrpg_build and execute the script
+    ```Bash
+    ./smrpg_build.sh
+    ```
+
+2. When the script is done compiling you will have a zip file containing only the plugins
+
+3. The folders addons and cfg found in ./build can be used for new installations of SRCDS game servers
+
+_Tip: You can download and install metamod to this directory to - Download from: https://www.sourcemm.net/downloads.php?branch=stable_
+
+__WARNING__
+adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
+Keep this in mind before you install the plugins or else you may owerwrite your own files by accident...
+
+---
 
 __LINUX__
 
