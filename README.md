@@ -1,5 +1,7 @@
 ### smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
 
+[Code License: MIT](https://choosealicense.com/licenses/mit/)
+
 | My Links: ||
 | --------: | --------------------------------------------------
 | WebPage:  | [leemann.se/fredrik](http://www.leemann.se/fredrik)
