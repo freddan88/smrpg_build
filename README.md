@@ -1,3 +1,5 @@
+###### README
+
 ### smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
 
 [Code License: MIT](https://choosealicense.com/licenses/mit/)
