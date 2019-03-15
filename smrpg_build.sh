@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Date: 2019-03-04
+# Date: 2019-03-15
 # Author: www.leemann.se/fredrik
 # YouTube: https://www.youtube.com/user/FreLee54
 #
@@ -63,13 +63,11 @@ for((i=0; i<=$giturls_length - 1; i++)); do
 	if [[ "${array_giturls[i]}" = *smrpg.git* ]]; then
 	
 		cd ./addons/src
-		mkdir -p plugins
 		smrpg_rev=$(git rev-list --count HEAD)
 		smrpg_cset=$(git rev-parse --short HEAD)
 		smrpg_major=$(echo $ver | cut -d'.' -f'1')
 		smrpg_minor=$(echo $ver | cut -d'.' -f'2' | cut -d'-' -f'1')
 		smrpg_ver=$(cat scripting/include/smrpg.inc | grep -o '#define SMRPG_VERSION.*' | cut -d'"' -f'2')
-		wget -q http://www.sourcemod.net/vbcompiler.php\?file_id\=141520 -O ./plugins/csgo_movement_unlocker.smx
 		curl -s https://forums.alliedmods.net/attachment.php\?attachmentid\=141521\&d\=1495261818 -o ./gamedata/csgo_movement_unlocker.games.txt
 		wget -q https://forums.alliedmods.net/attachment.php\?attachmentid\=141520\&d\=1421117043 -O ./scripting/csgo_movement_unlocker.sp
 		cd $root_path
@@ -92,6 +90,7 @@ for((i=0; i<=$giturls_length - 1; i++)); do
 	done
 
 	rm -rf ./addons/src
+	rm -rf ./addons/sourcemod/plugins
 done
 
 echo " "
@@ -110,7 +109,7 @@ echo "#define SMRPG_VERSION \"$smrpg_ver\"" >> $autoversion_file
 
 cd ./addons/sourcemod/scripting
 ls smrpg*.sp upgrades/smrpg*.sp > smrpg_plugins.txt
-mkdir -p ./plugins/upgrades
+mkdir -p ./plugins/{upgrades,disabled/errors}
 cd $root_path
 
 cp -f ./build/smrpg_assets/* ./addons/sourcemod/configs
@@ -127,8 +126,12 @@ for plugin in $(cat smrpg_plugins.txt); do
 	# echo $plugin
 
 	if [[ "$plugin" = *smrpg_chattags.sp* ]]; then
-		./spcomp ./$plugin -o ./plugins/smrpg_chattags_cp.smx -E
-		./spcomp ./$plugin -o ./plugins/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
+		./spcomp ./$plugin -o ./plugins/disabled/errors/smrpg_chattags_cp.smx -E
+		./spcomp ./$plugin -o ./plugins/disabled/errors/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
+		echo " "
+		echo "Disabling some plugins due to errors in there sourcecode"
+		echo "Moving disabled plugins to: plugins/disabled/errors..."
+		echo " "
 	elif [[ "$plugin" = *smrpg_upgrade_example.sp* ]]; then
 		echo " "
 		echo Skipping: $plugin
@@ -137,6 +140,18 @@ for plugin in $(cat smrpg_plugins.txt); do
 		./spcomp ./$plugin -o ./plugins/$filename -E
 	fi
 done
+
+wget -q https://bitbucket.org/GoD_Tony/updater/get/v1.2.2.zip -O ./updater.zip
+unzip -qqo updater.zip
+
+cp -rf ./GoD_Tony-updater*/include ./GoD_Tony-updater*/updater ./GoD_Tony-updater*/updater.sp .
+rm -rf ./GoD_Tony-updater*
+
+./spcomp ./csgo_movement_unlocker.sp -o ./plugins/disabled/csgo_movement_unlocker.smx -E
+./spcomp ./custom-chatcolors-cp.sp -o ./plugins/disabled/errors/custom-chatcolors-cp.smx -E
+./spcomp ./simple-chatprocessor.sp -o ./plugins/disabled/errors/simple-chatprocessor.smx -E
+./spcomp ./chat-processor.sp -o ./plugins/disabled/errors/chat-processor.smx -E
+./spcomp ./cp-scp-wrapper.sp -o ./plugins/disabled/errors/cp-scp-wrapper.smx -E
 
 cp -rf ./plugins $root_path/addons/sourcemod
 cp -rf ./plugins ..

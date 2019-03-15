@@ -56,6 +56,10 @@ Username: Impact123<br/>
 Plugin: AutoExecConfig<br/>
 URL: https://github.com/Impact123/AutoExecConfig<br/>
 
+Username: GoD Tony<br/>
+Plugin: Updater<br/>
+URL: https://bitbucket.org/GoD_Tony/updater<br/>
+
 Username: minimoney1<br/>
 Plugin: simple-chat-processor<br/>
 URL: https://bitbucket.org/minimoney1/simple-chat-processor<br/>
