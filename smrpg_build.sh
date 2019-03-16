@@ -13,8 +13,8 @@
 # -------------------------------------------------|
 
 # Windows:
-wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
-unzip -qqo dhooks*windows.zip
+# wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
+# unzip -qqo dhooks*windows.zip
 
 # Linux:
 # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
