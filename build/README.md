@@ -13,3 +13,8 @@
 
 - Sourcemod: [sourcemod.net/downloads](https://www.sourcemod.net/downloads.php?branch=stable)
 - Metamod: [sourcemm.net/downloads](https://www.sourcemm.net/downloads.php?branch=stable)
+
+---
+
+Script: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)<br/>
+Donate: [paypal.me/freddan88](https://www.paypal.me/freddan88)
