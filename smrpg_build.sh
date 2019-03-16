@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Date: 2019-03-15
+# Date: 2019-03-16
 # Author: www.leemann.se/fredrik
 # YouTube: https://www.youtube.com/user/FreLee54
 #
@@ -13,8 +13,8 @@
 # -------------------------------------------------|
 
 # Windows:
-# wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
-# unzip -qqo dhooks*windows.zip
+wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
+unzip -qqo dhooks*windows.zip
 
 # Linux:
 # wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
@@ -70,6 +70,9 @@ for((i=0; i<=$giturls_length - 1; i++)); do
 		smrpg_ver=$(cat scripting/include/smrpg.inc | grep -o '#define SMRPG_VERSION.*' | cut -d'"' -f'2')
 		curl -s https://forums.alliedmods.net/attachment.php\?attachmentid\=141521\&d\=1495261818 -o ./gamedata/csgo_movement_unlocker.games.txt
 		wget -q https://forums.alliedmods.net/attachment.php\?attachmentid\=141520\&d\=1421117043 -O ./scripting/csgo_movement_unlocker.sp
+		wget -q https://bitbucket.org/GoD_Tony/updater/get/v1.2.2.zip -O ./updater.zip && unzip -qqo updater.zip
+		cp -rf ./GoD_Tony-updater*/include ./GoD_Tony-updater*/updater ./GoD_Tony-updater*/updater.sp ./scripting
+		rm -rf ./GoD_Tony-updater* && rm -f updater.zip
 		cd $root_path
 	fi
 
@@ -141,19 +144,16 @@ for plugin in $(cat smrpg_plugins.txt); do
 	fi
 done
 
-wget -q https://bitbucket.org/GoD_Tony/updater/get/v1.2.2.zip -O ./updater.zip
-unzip -qqo updater.zip
-
-cp -rf ./GoD_Tony-updater*/include ./GoD_Tony-updater*/updater ./GoD_Tony-updater*/updater.sp .
-rm -rf ./GoD_Tony-updater*
-
 ./spcomp ./csgo_movement_unlocker.sp -o ./plugins/disabled/csgo_movement_unlocker.smx -E
 ./spcomp ./custom-chatcolors-cp.sp -o ./plugins/disabled/errors/custom-chatcolors-cp.smx -E
 ./spcomp ./simple-chatprocessor.sp -o ./plugins/disabled/errors/simple-chatprocessor.smx -E
 ./spcomp ./chat-processor.sp -o ./plugins/disabled/errors/chat-processor.smx -E
 ./spcomp ./cp-scp-wrapper.sp -o ./plugins/disabled/errors/cp-scp-wrapper.smx -E
 
+rm -f $root_path/addons/sourcemod/scripting/smrpg_plugins.txt
+rm -rf $root_path/addons/sourcemod/scripting/plugins
 cp -rf ./plugins $root_path/addons/sourcemod
+rm -f ./smrpg_plugins.txt
 cp -rf ./plugins ..
 rm -rf ./plugins
 cd $root_path

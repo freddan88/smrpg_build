@@ -24,11 +24,15 @@ Security and bugs shall be reported to each individual project
 This script will download all dependencies and compile them with the plugin
 </pre>
 
-#### Tested on:
+#### Script tested on:
 
 - Windows using babun Shell version 1.2.0
 - Linux CentOS 7 64Bit
 - Linux Ubuntu 18.04.2 LTS 64Bit
+
+#### Plugins tested on:
+
+- SRCDS playing Counter-Strike Source
 
 #### Plugins, dependencies and authors:
 
@@ -63,6 +67,13 @@ URL: https://bitbucket.org/GoD_Tony/updater<br/>
 Username: minimoney1<br/>
 Plugin: simple-chat-processor<br/>
 URL: https://bitbucket.org/minimoney1/simple-chat-processor<br/>
+
+Community: AlliedModders<br/>
+Modification: SourceMod<br/>
+URL: https://www.sourcemod.net<br/>
+
+Info: AlliedModders<br/>
+URL: https://www.alliedmods.net<br/>
 
 #### Instructions:
 
