@@ -252,3 +252,7 @@ tar -xvzf mmsource-1.10.7-git968-linux.tar.gz -C ./build
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
 Keep this in mind before you install the plugins or else you may owerwrite your own files by accident...
+
+---
+
+Scripted by me: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)
