@@ -255,5 +255,5 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 
 ---
 
-Scripted in Bash by: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)<br/>
+Script: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)<br/>
 Donate: [paypal.me/freddan88](https://www.paypal.me/freddan88)
