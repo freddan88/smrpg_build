@@ -33,6 +33,8 @@ This script will download all dependencies and compile them with the plugin
 #### Plugins tested on:
 
 - SRCDS playing Counter-Strike Source
+- SRCDS playing Counter-Strike: Global Offensive
+( Some plugins may not work due to incompatibility with CSGO )
 
 #### Plugins, dependencies and authors:
 
