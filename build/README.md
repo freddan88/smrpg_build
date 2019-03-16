@@ -1,4 +1,4 @@
-﻿### smrpg_build ( Bashscript for: Windows / Linux to compile Sourcemod plugin )
+﻿### smrpg_build ( Bashscript for: Windows / Linux to compile SMRPG Sourcemod plugin )
 
 | My Links: ||
 | --------: | --------------------------------------------------
