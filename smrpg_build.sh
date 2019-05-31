@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Date: 2019-03-16
+# Date: 2019-05-31
 # Author: www.leemann.se/fredrik
 # YouTube: https://www.youtube.com/user/FreLee54
 #
@@ -55,13 +55,13 @@ autoversion_file="./addons/sourcemod/scripting/include/smrpg/smrpg_autoversion.i
 giturls_length=${#array_giturls[@]}
 
 for((i=0; i<=$giturls_length - 1; i++)); do
-	
+
 	echo " "
 	echo "Running: ${array_giturls[i]}"
 	${array_giturls[i]}
 
 	if [[ "${array_giturls[i]}" = *smrpg.git* ]]; then
-	
+
 		cd ./addons/src
 		smrpg_rev=$(git rev-list --count HEAD)
 		smrpg_cset=$(git rev-parse --short HEAD)
@@ -120,10 +120,9 @@ cp -rf ./addons/sourcemod ./build/addons
 cd ./build/addons/sourcemod/scripting
 
 for plugin in $(cat smrpg_plugins.txt); do
-	
+
 	filename=$(echo $plugin | cut -f'1' -d'.')
 	file_ext=$(echo $plugin | cut -f'2' -d'.')
-	
 	# echo $filename
 	# echo $file_ext
 	# echo $plugin
