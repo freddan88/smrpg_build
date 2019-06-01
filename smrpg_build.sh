@@ -131,7 +131,7 @@ for plugin in $(cat smrpg_plugins.txt); do
 		./spcomp ./$plugin -o ./plugins/disabled/errors/smrpg_chattags_cp.smx -E
 		./spcomp ./$plugin -o ./plugins/disabled/errors/smrpg_chattags_scp.smx -E USE_SIMPLE_PROCESSOR=
 		echo " "
-		echo "Disabling some plugins due to errors in there sourcecode"
+		echo "Disabling some plugins due to errors in the source code"
 		echo "Moving disabled plugins to: plugins/disabled/errors..."
 		echo " "
 	elif [[ "$plugin" = *smrpg_upgrade_example.sp* ]]; then
