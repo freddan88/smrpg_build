@@ -192,7 +192,7 @@ _Tip: You can use wget from Bash and then tar to extract it, example:_
 ```Bash
 cd ./smrpg_build
 wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-linux.tar.gz
-tar -xvzf sourcemod-1.9.0-git6275-linux.tar.gz -C ./build
+tar -xvzf sourcemod-*-linux.tar.gz
 ```
 
 > Configuration
