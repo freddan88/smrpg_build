@@ -192,7 +192,7 @@ _Tip: You can use wget from Bash and then tar to extract it, example:_
 ```Bash
 cd ./smrpg_build
 wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-linux.tar.gz
-tar -xvzf sourcemod-*-linux.tar.gz
+tar -xvzf sourcemod-*-linux.tar.gz -C ./build
 ```
 
 > Configuration
@@ -200,7 +200,6 @@ tar -xvzf sourcemod-*-linux.tar.gz
 1. Use nano in bash to edit and uncoment the two lines used by dhooks for Linux
 
 <pre>
-cd ./smrpg_build
 nano ./smrpg_build.sh
 </pre>
 
@@ -248,7 +247,7 @@ _Example using wget in bash:_
 ```Bash
 cd ./smrpg_build
 wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
-tar -xvzf mmsource-1.10.7-git968-linux.tar.gz -C ./build
+tar -xvzf mmsource-*-linux.tar.gz -C ./build
 ```
 
 __WARNING__
