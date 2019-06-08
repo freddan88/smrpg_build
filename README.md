@@ -28,6 +28,7 @@ This script will download all dependencies and compile them with the plugin
 
 - Windows using babun Shell version 1.2.0
 - Linux CentOS 7 64Bit
+- Linux Debian 9.9.0 64Bit
 - Linux Ubuntu 18.04.2 LTS 64Bit
 
 #### Plugins tested on:
