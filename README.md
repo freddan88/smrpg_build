@@ -110,6 +110,17 @@ wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-windows.zip
 unzip sourcemod-1.9.0-git6275-windows.zip -d ./build
 ```
 
+You can also download metamod to this directory to enable autoloading of sourcemod<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable
+
+_Example using wget in babun:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
+unzip mmsource-1.10.7-git968-windows.zip -d ./build
+```
+
 > Configuration
 
 1. Use nano in babun to edit and uncoment the two lines used by dhooks for Windows
@@ -134,17 +145,6 @@ Change to:
     wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-windows.zip
     unzip -qqo dhooks*windows.zip
 </pre>
-
-You can also want to download metamod to this directory to enable autoloading of sourcemod<br/>
-Download from: https://www.sourcemm.net/downloads.php?branch=stable
-
-_Example using wget in babun:_
-
-```Bash
-cd ./smrpg_build
-wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
-unzip mmsource-1.10.7-git968-windows.zip -d ./build
-```
 
 Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
 
@@ -198,6 +198,17 @@ wget https://sm.alliedmods.net/smdrop/1.9/sourcemod-1.9.0-git6275-linux.tar.gz
 tar -xvzf sourcemod-*-linux.tar.gz -C ./build
 ```
 
+You can also download metamod to this directory to enable autoloading of sourcemod<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable
+
+_Example using wget in bash:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
+tar -xvzf mmsource-*-linux.tar.gz -C ./build
+```
+
 > Configuration
 
 1. Use nano in bash to edit and uncoment the two lines used by dhooks for Linux
@@ -221,17 +232,6 @@ Change to:
     wget -q http://users.alliedmods.net/~drifter/builds/dhooks/2.2/dhooks-2.2.0-hg126-linux.tar.gz
     tar -zxf dhooks*linux.tar.gz
 </pre>
-
-You can also want to download metamod to this directory to enable autoloading of sourcemod<br/>
-Download from: https://www.sourcemm.net/downloads.php?branch=stable
-
-_Example using wget in bash:_
-
-```Bash
-cd ./smrpg_build
-wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
-tar -xvzf mmsource-*-linux.tar.gz -C ./build
-```
 
 Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
 
