@@ -114,7 +114,6 @@ Download from: https://www.sourcemm.net/downloads.php?branch=stable
 _Example using wget in babun:_
 
 ```Bash
-cd ./smrpg_build
 wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
 unzip mmsource-1.10.7-git968-windows.zip -d ./build
 ```
@@ -202,7 +201,6 @@ Download from: https://www.sourcemm.net/downloads.php?branch=stable
 _Example using wget in bash:_
 
 ```Bash
-cd ./smrpg_build
 wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
 tar -xvzf mmsource-*-linux.tar.gz -C ./build
 ```
