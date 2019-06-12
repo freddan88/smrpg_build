@@ -102,7 +102,7 @@ http://babun.github.io/
 4. Download and extract sourcemod to smrpg_build/build<br/>
 https://www.sourcemod.net/downloads.php?branch=stable
 
-_Tip: You can use wget from Babun and then unzip to extract it, example:_
+Tip: You can use wget from Babun and then unzip to extract it, example:
 
 ```Bash
 cd ./smrpg_build
@@ -190,7 +190,7 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 3. Download and extract sourcemod to smrpg_build/build<br/>
 https://www.sourcemod.net/downloads.php?branch=stable
 
-_Tip: You can use wget from Bash and then tar to extract it, example:_
+Tip: You can use wget from Bash and then tar to extract it, example:
 
 ```Bash
 cd ./smrpg_build
