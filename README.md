@@ -78,9 +78,11 @@ URL: https://www.sourcemod.net<br/>
 Info: AlliedModders<br/>
 URL: https://www.alliedmods.net<br/>
 
-#### Instructions:
+__Instructions:__
 
-### WINDOWS
+---
+
+#### WINDOWS
 
 > Installation
 
@@ -165,7 +167,7 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 
 ---
 
-### LINUX
+#### LINUX
 
 > Installation
 
