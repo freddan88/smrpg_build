@@ -135,7 +135,7 @@ Change to:
     unzip -qqo dhooks*windows.zip
 </pre>
 
-_Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
+Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
 
 2. Save the changes and continue reading below for usage
 
@@ -242,7 +242,7 @@ _Tip: You can change the version getting downloaded by changing the URL - Downlo
 
 4. The folders addons and cfg found in ./build can be used for new installations of SRCDS
 
-_Tip: Download and install metamod to this directory to enable autoloading of sourcemod_<br/>
+Tip: Download and install metamod to this directory to enable autoloading of sourcemod<br/>
 Download from: https://www.sourcemm.net/downloads.php?branch=stable
 
 _Example using wget in bash:_
