@@ -173,7 +173,7 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 
 1. Install dependencies:
 
-    _Ubuntu_
+    _Ubuntu/Debian_
     ```Bash
     apt-get install zip unzip wget curl git nano lib32ncurses5 lib32z1 lib32stdc++6
     ```
