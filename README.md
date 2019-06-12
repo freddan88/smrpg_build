@@ -135,6 +135,17 @@ Change to:
     unzip -qqo dhooks*windows.zip
 </pre>
 
+You can also want to download metamod to this directory to enable autoloading of sourcemod<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable
+
+_Example using wget in babun:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
+unzip mmsource-1.10.7-git968-windows.zip -d ./build
+```
+
 Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
 
 2. Save the changes and continue reading below for usage
@@ -149,17 +160,6 @@ Tip: You can change the version getting downloaded by changing the URL - Downloa
 2. When the script is done compiling you will have a zip file containing the plugins
 
 3. The folders addons and cfg found in ./build can be used for new installations of SRCDS
-
-Tip: Download and install metamod to this directory to enable autoloading of sourcemod<br/>
-Download from: https://www.sourcemm.net/downloads.php?branch=stable
-
-_Example using wget in babun:_
-
-```Bash
-cd ./smrpg_build
-wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-windows.zip
-unzip mmsource-1.10.7-git968-windows.zip -d ./build
-```
 
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
@@ -222,6 +222,17 @@ Change to:
     tar -zxf dhooks*linux.tar.gz
 </pre>
 
+You can also want to download metamod to this directory to enable autoloading of sourcemod<br/>
+Download from: https://www.sourcemm.net/downloads.php?branch=stable
+
+_Example using wget in bash:_
+
+```Bash
+cd ./smrpg_build
+wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
+tar -xvzf mmsource-*-linux.tar.gz -C ./build
+```
+
 Tip: You can change the version getting downloaded by changing the URL - Download dhooks from: http://users.alliedmods.net/~drifter/builds/dhooks
 
 2. Save the changes and continue reading below for usage
@@ -241,17 +252,6 @@ Tip: You can change the version getting downloaded by changing the URL - Downloa
 3. When the script is done compiling you will have a zip file containing the plugins
 
 4. The folders addons and cfg found in ./build can be used for new installations of SRCDS
-
-Tip: Download and install metamod to this directory to enable autoloading of sourcemod<br/>
-Download from: https://www.sourcemm.net/downloads.php?branch=stable
-
-_Example using wget in bash:_
-
-```Bash
-cd ./smrpg_build
-wget https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git968-linux.tar.gz
-tar -xvzf mmsource-*-linux.tar.gz -C ./build
-```
 
 __WARNING__
 adminmenu_maplist.ini, admins_simple.ini, databases.cfg are all included in sourcemod/configs<br/>
