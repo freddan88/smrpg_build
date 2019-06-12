@@ -9,7 +9,7 @@
 | Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
 | GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
-- Video Windows: [Compile SMRPG 2019 Windows - YouTube](https://www.youtube.com/watch?v=N1oSkMJxxNY)
+- Video Windows: [Compile SMRPG 2019 Windows](https://www.youtube.com/watch?v=N1oSkMJxxNY)
 - YouTube Playlist: [SMRPG 2019](https://www.youtube.com/playlist?list=PLgwpw8nEhjkXKJraFGufnOkAuJCvEpYX9)
 
 #### Description:
