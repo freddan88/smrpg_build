@@ -80,7 +80,7 @@ URL: https://www.alliedmods.net<br/>
 
 #### Instructions:
 
-__WINDOWS__
+### WINDOWS
 
 > Installation
 
@@ -165,7 +165,7 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 
 ---
 
-__LINUX__
+### LINUX
 
 > Installation
 
