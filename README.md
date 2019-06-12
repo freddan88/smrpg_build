@@ -1,5 +1,3 @@
-###### README
-
 ### smrpg_build ( Bashscript for: Windows / Linux to compile SMRPG Sourcemod plugin )
 
 [Code License: MIT](https://choosealicense.com/licenses/mit/)
@@ -259,5 +257,5 @@ Keep this in mind before you install the plugins or else you may owerwrite your 
 
 ---
 
-Script: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)<br/>
+Script by: [www.leemann.se/fredrik](http://www.leemann.se/fredrik)<br/>
 Donate: [paypal.me/freddan88](https://www.paypal.me/freddan88)
