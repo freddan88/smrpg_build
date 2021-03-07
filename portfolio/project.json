@@ -1,0 +1,22 @@
+{
+    "projectName": "smrpg_build",
+    "projectOriginIndex": 0,
+    "projectCreatedAt": "2019-03-01",
+    "projectResourceCategoryIndex": 0,
+    "projectResource": "https://www.youtube.com/playlist?list=PLgwpw8nEhjkXKJraFGufnOkAuJCvEpYX9",
+    "projectGitHubUrl": "https://github.com/freddan88/smrpg_build",
+    "projectImage": "https://github.com/freddan88/smrpg_build/blob/master/portfolio/portfolio_smrpg.gif",
+    "projectDescription": "This project is about making it easier to compile and build SMRPG for Sourcemod (Counter-Strike Source and Counter-Strike Global Offensive)",
+    "licenseUrl": "https://choosealicense.com/licenses/mit",
+    "licenseName": "License: MIT",
+    "projectTechnologies": [
+        "Bash",
+        "Babun",
+        "SRCDS",
+        "Sourcemod",
+        "Windows",
+        "Linux",
+        "Ubuntu",
+        "CentOS"
+    ]
+}
