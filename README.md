@@ -5,8 +5,6 @@
 | My Links: ||
 | --------: | --------------------------------------------------
 | WebPage:  | [leemann.se/fredrik](http://www.leemann.se/fredrik)
-| YouTube:  | [youtube.com/FreLee54](https://www.youtube.com/user/FreLee54)
-| Donate:   | [paypal.me/freddan88](https://www.paypal.me/freddan88)
 | GitHub:   | [github.com/freddan88/smrpg_build](https://github.com/freddan88/smrpg_build)
 
 - Video Linux: [Compile SMRPG 2019 Linux](https://www.youtube.com/watch?v=eN2XnHM1CVY)
